@@ -29,13 +29,28 @@
     // with these React API calls
     // 💰 The example in the markdown file should be a good hint for you.
 
-    const reactElement = React.createElement('h1', {
-      id: 'element-id',
-      children: 'Hello world!',
-    })
+    // const reactElement = React.createElement('h1', {
+    //   id: 'element-id',
+    //   children: 'Hello world!',
+    // })
 
     const root = ReactDOM.createRoot(rootElement)
 
-    root.render(reactElement)
+    // root.render(reactElement)
+
+    const span = React.createElement('span', {
+      children: 'Hello',
+    })
+
+    const container = React.createElement(
+      'div',
+      {
+        class: 'container',
+      },
+      React.createElement('span', {children: 'Hello'}),
+      React.createElement('span', {children: 'World'}),
+    )
+
+    root.render(container)
   </script>
 </body>
